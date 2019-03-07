@@ -7,8 +7,11 @@ import {
   Text,
   View,
   Button,
-  CameraRoll
+  CameraRoll,
+  Modal,
+  TouchableHighlight
 } from 'react-native';
+import PhotoDetails from '../components/PhotoDetails';
 
 export default class HomeScreen extends React.Component {
   static navigationOptions = {
@@ -22,7 +25,8 @@ export default class HomeScreen extends React.Component {
       hasNextPage: false,
       startFrom: undefined,
       loadingPhotos: false,
-      visiblePhotos: 100
+      visiblePhotos: 100,
+      activePhoto: undefined
     };
   }
 
@@ -45,7 +49,8 @@ export default class HomeScreen extends React.Component {
       });
     })
     .then(() => {
-      if (this.state.hasNextPage) return this.loadPhotos();
+      // if (this.state.hasNextPage) return this.loadPhotos();
+      this.setState({ activePhoto: this.state.photos[0] });
     })
     .catch(error => {
 
@@ -68,6 +73,26 @@ export default class HomeScreen extends React.Component {
   render() {
     return (
       <View style={styles.container}>
+        <Modal
+          visible={!!this.state.activePhoto && !!this.state.activePhoto.node}
+          animationType='slide'
+          onRequestClose={() => this.setState({ activePhoto: undefined })}
+        >
+          <View style={{ marginTop: 60 }}>
+            <Text style={{ textAlign: 'center', fontWeight: 'bold', fontSize: 18 }}>Details</Text>
+          </View>
+          <PhotoDetails
+            activePhoto={this.state.activePhoto}
+            close={() => this.setState({ activePhoto: undefined })}
+          /
+          >
+          <View style={{ marginTop: 20 }}>
+            <Button
+              onPress={() => this.setState({ activePhoto: undefined })}
+              title='Close'
+            />
+          </View>
+        </Modal>
         <ScrollView
           style={styles.container}
           contentContainerStyle={styles.contentContainer}
@@ -96,11 +121,16 @@ export default class HomeScreen extends React.Component {
           </View>
           <View style={{ flex: 1, flexDirection: 'row', flexWrap: 'wrap' }}>
             {this.state.photos.map((photo, index) => {
-              if (index < this.state.visiblePhotos) return <Image
+              if (index < this.state.visiblePhotos) return <TouchableHighlight
                 key={`photo_${index}`}
-                style={{ width: '20%', paddingTop: '20%' }}
-                source={{ uri: photo.node.image.uri }}
-              />;
+                style={{ width: '20%' }}
+                onPress={() => this.setState({ activePhoto: photo })}
+              >
+                <Image
+                  style={{ width: '100%', paddingTop: '100%' }}
+                  source={{ uri: photo.node.image.uri }}
+                />
+              </TouchableHighlight>;
             })}
           </View>
           <View style={{ padding: 20, marginTop: 10 }}>
@@ -205,4 +235,12 @@ const styles = StyleSheet.create({
     fontSize: 14,
     color: '#2e78b7',
   },
+  listIcon: {
+    flexDirection: 'row',
+    backgroundColor: '#fdfdfd',
+    paddingHorizontal: 15,
+    paddingVertical: 15,
+    borderBottomWidth: StyleSheet.hairlineWidth,
+    borderBottomColor: '#EDEDED',
+  }
 });
