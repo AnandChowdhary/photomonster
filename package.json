@@ -5,6 +5,10 @@
     "android": "expo start --android",
     "ios": "expo start --ios",
     "eject": "expo eject",
+    "build:android": "expo build:android",
+    "build:ios": "expo build:ios",
+    "upload:ios": "expo upload:ios",
+    "deploy:ios": "yarn build:ios && yarn upload:ios",
     "test": "node ./node_modules/jest/bin/jest.js --watchAll"
   },
   "jest": {
