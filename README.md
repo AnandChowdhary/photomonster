@@ -41,4 +41,6 @@ This means that if you're a regular person who has between 0 and 15,000 photos, 
 
 ## 📝 License
 
-MIT
+- Code: MIT
+- Logo: CC-BY-SA 4.0
+- Icon: [Camera](https://thenounproject.com/term/camera/1967624) by Jafar from [the Noun Project](https://thenounproject.com)
