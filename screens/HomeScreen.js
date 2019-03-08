@@ -50,7 +50,7 @@ export default class HomeScreen extends React.Component {
     })
     .then(() => {
       // if (this.state.hasNextPage) return this.loadPhotos();
-      this.setState({ activePhoto: this.state.photos[0] });
+      // this.setState({ activePhoto: this.state.photos[0] });
     })
     .catch(error => {
 
@@ -103,7 +103,7 @@ export default class HomeScreen extends React.Component {
         >
           <View style={styles.welcomeContainer}>
             <Image
-              source={require('../assets/images/robot-dev.png')}
+              source={require('../assets/images/android-icon.png')}
               style={styles.welcomeImage}
             />
           </View>
