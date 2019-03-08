@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="256" height="256" viewBox="0 0 256 256">
+  <defs>
+    <linearGradient id="linear-gradient" x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#56b4d3"/>
+      <stop offset="1" stop-color="#348f50"/>
+    </linearGradient>
+    <clipPath id="clip-custom_1">
+      <rect width="256" height="256"/>
+    </clipPath>
+  </defs>
+  <g id="custom_1" data-name="custom – 1" clip-path="url(#clip-custom_1)">
+    <rect width="256" height="256" fill="#fff"/>
+    <circle id="Ellipse_1" data-name="Ellipse 1" cx="128" cy="128" r="128" fill="url(#linear-gradient)"/>
+    <g id="Group_1" data-name="Group 1" transform="translate(48.286 63)">
+      <g id="Group_1-2" data-name="Group 1">
+        <path id="Path_1" data-name="Path 1" d="M143.721,24.087h-22.73l-14.272-14.8A16.977,16.977,0,0,0,95.09,4h-29.6A16.977,16.977,0,0,0,53.86,9.286l-14.272,14.8H16.858A15.575,15.575,0,0,0,1,39.945v64.489a15.575,15.575,0,0,0,15.858,15.858H75V102.319H60.731A21.206,21.206,0,0,1,39.588,81.175V58.445A21.206,21.206,0,0,1,60.731,37.3H99.319a21.206,21.206,0,0,1,21.144,21.144v22.73a21.206,21.206,0,0,1-21.144,21.144H85.575v17.972h58.146a15.575,15.575,0,0,0,15.858-15.858V39.945A15.9,15.9,0,0,0,143.721,24.087Z" transform="translate(-1 -4)" fill="#fff"/>
+        <path id="Path_2" data-name="Path 2" d="M66.96,49.93a5.11,5.11,0,0,1-7.4,0L45.287,36.187V56.274H59.559A10.6,10.6,0,0,0,70.131,45.7V22.972A10.6,10.6,0,0,0,59.559,12.4H20.972A10.6,10.6,0,0,0,10.4,22.972V45.7A10.6,10.6,0,0,0,20.972,56.274H34.715V36.187L20.972,49.93a5.71,5.71,0,0,1-3.7,1.586,5.71,5.71,0,0,1-3.7-1.586,5.11,5.11,0,0,1,0-7.4L36.3,19.8h0c.529-.529,1.057-1.057,1.586-1.057h0c.529,0,1.057-.529,1.586-.529h2.114c.529,0,1.057.529,1.586,1.057L66.431,42.53A4.754,4.754,0,0,1,66.96,49.93Z" transform="translate(39.288 32.002)" fill="#fff"/>
+      </g>
+    </g>
+  </g>
+</svg>
