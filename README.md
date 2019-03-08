@@ -1,7 +1,8 @@
-# 📷 Photomonster
+![Photomonster](https://raw.githubusercontent.com/AnandChowdhary/photomonster/master/assets/images/logo.png)
+
 **WIP:** Photomonster is an app for Android and iOS devices which backs up your photos to the cloud.
 
-## 🖼 How it works
+## 📷 How it works
 - Download the Photomonster app to your Android device or iPhone
 - Open the app and select your preferred cloud storage provider
 - Enter your credentials and be patient
